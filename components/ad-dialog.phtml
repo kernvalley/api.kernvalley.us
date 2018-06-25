@@ -1,0 +1,235 @@
+<dialog id="ad-dialog" class="animation-speed-normal animation-ease-in-out fade-in">
+	<form name="ad" action="ad.php">
+		<!--<fieldset>
+			<legend>Dimensions</legend>
+			<div class="card">
+				<label for="ad-width">Width</label>
+				<input type="number" min="100" max="1000" value="400" step="1" name="width" id="ad-width" />
+			</div>
+			<div class="card">
+				<label for="ad-width">Height</label>
+				<input type="number" min="100" max="1000" value="400" step="1" name="height" id="ad-height" />
+			</div>
+		</fieldset>-->
+		<fieldset>
+			<legend>Background</legend>
+			<div class="card">
+				<label for="ad-bg-color">Color</label>
+				<input type="color" name="background-color" id="ad-bg-color" value="#ffffff" required="" />
+			</div>
+			<div class="card">
+				<label for="ad-bg-img">Image</label>
+				<input type="file" accept="image/jpeg, image/svg+xml, image/png" name="background-image" id="ad-bg-img" />
+			</div>
+			<div class="card">
+				<label for="ad-bg-x">X-Position</label>
+				<input type="range" min="0" max="100" name="background-x" id="ad-bg-x" value="50" />
+			</div>
+			<div class="card">
+				<label for="ad-bg-y">Y-Position</label>
+				<input type="range" min="0" max="100" name="background-y" id="ad-bg-y" value="50" />
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Text</legend>
+			<div class="card">
+				<label for="ad-title">Title</label>
+				<input type="text" name="title" id="ad-title" placeholder="Title" required="" />
+			</div>
+			<div class="card">
+				<label for="ad-content">Content</label><br />
+				<textarea name="content" cols="50" rows="3" id="ad-content" placeholder="Ad text content" required=""></textarea>
+			</div>
+			<div class="card">
+				<label for="ad-color">Color</label>
+				<input type="color" name="color" id="ad-color" placeholder="color" value="#000000" required="" />
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Logo</legend>
+			<div>
+				<input type="file" name="logo" placeholder="Logo" accept="image/png,image/svg+xml" required="" />
+				<br />
+				<label for="logo-animation">Animation</label>
+				<select name="animation" id="logo-animation">
+					<optgroup label="Attention Seekers">
+						<option value="bounce">bounce</option>
+						<option value="flash">flash</option>
+						<option value="pulse">pulse</option>
+						<option value="rubberBand">rubberBand</option>
+						<option value="shake">shake</option>
+						<option value="swing">swing</option>
+						<option value="tada">tada</option>
+						<option value="wobble">wobble</option>
+						<option value="jello">jello</option>
+					</optgroup>
+					<optgroup label="Bouncing Entrances">
+						<option value="bounceIn">bounceIn</option>
+						<option value="bounceInDown">bounceInDown</option>
+						<option value="bounceInLeft">bounceInLeft</option>
+						<option value="bounceInRight">bounceInRight</option>
+						<option value="bounceInUp">bounceInUp</option>
+					</optgroup>
+					<optgroup label="Bouncing Exits">
+						<option value="bounceOut">bounceOut</option>
+						<option value="bounceOutDown">bounceOutDown</option>
+						<option value="bounceOutLeft">bounceOutLeft</option>
+						<option value="bounceOutRight">bounceOutRight</option>
+						<option value="bounceOutUp">bounceOutUp</option>
+					</optgroup>
+						<optgroup label="Fading Entrances">
+						<option value="fadeIn">fadeIn</option>
+						<option value="fadeInDown">fadeInDown</option>
+						<option value="fadeInDownBig">fadeInDownBig</option>
+						<option value="fadeInLeft">fadeInLeft</option>
+						<option value="fadeInLeftBig">fadeInLeftBig</option>
+						<option value="fadeInRight">fadeInRight</option>
+						<option value="fadeInRightBig">fadeInRightBig</option>
+						<option value="fadeInUp" selected="">fadeInUp</option>
+						<option value="fadeInUpBig">fadeInUpBig</option>
+					</optgroup>
+					<optgroup label="Fading Exits">
+						<option value="fadeOut">fadeOut</option>
+						<option value="fadeOutDown">fadeOutDown</option>
+						<option value="fadeOutDownBig">fadeOutDownBig</option>
+						<option value="fadeOutLeft">fadeOutLeft</option>
+						<option value="fadeOutLeftBig">fadeOutLeftBig</option>
+						<option value="fadeOutRight">fadeOutRight</option>
+						<option value="fadeOutRightBig">fadeOutRightBig</option>
+						<option value="fadeOutUp">fadeOutUp</option>
+						<option value="fadeOutUpBig">fadeOutUpBig</option>
+					</optgroup>
+					<optgroup label="Flippers">
+						<option value="flip">flip</option>
+						<option value="flipInX">flipInX</option>
+						<option value="flipInY">flipInY</option>
+						<option value="flipOutX">flipOutX</option>
+						<option value="flipOutY">flipOutY</option>
+					</optgroup>
+					<optgroup label="Lightspeed">
+					<option value="lightSpeedIn">lightSpeedIn</option>
+					<option value="lightSpeedOut">lightSpeedOut</option>
+					</optgroup>
+					<optgroup label="Rotating Entrances">
+						<option value="rotateIn">rotateIn</option>
+						<option value="rotateInDownLeft">rotateInDownLeft</option>
+						<option value="rotateInDownRight">rotateInDownRight</option>
+						<option value="rotateInUpLeft">rotateInUpLeft</option>
+						<option value="rotateInUpRight">rotateInUpRight</option>
+					</optgroup>
+					<optgroup label="Rotating Exits">
+						<option value="rotateOut">rotateOut</option>
+						<option value="rotateOutDownLeft">rotateOutDownLeft</option>
+						<option value="rotateOutDownRight">rotateOutDownRight</option>
+						<option value="rotateOutUpLeft">rotateOutUpLeft</option>
+						<option value="rotateOutUpRight">rotateOutUpRight</option>
+					</optgroup>
+					<optgroup label="Sliding Entrances">
+						<option value="slideInUp">slideInUp</option>
+						<option value="slideInDown">slideInDown</option>
+						<option value="slideInLeft">slideInLeft</option>
+						<option value="slideInRight">slideInRight</option>
+					</optgroup>
+					<optgroup label="Sliding Exits">
+						<option value="slideOutUp">slideOutUp</option>
+						<option value="slideOutDown">slideOutDown</option>
+						<option value="slideOutLeft">slideOutLeft</option>
+						<option value="slideOutRight">slideOutRight</option>
+					</optgroup>
+					<optgroup label="Zoom Entrances">
+						<option value="zoomIn">zoomIn</option>
+						<option value="zoomInDown">zoomInDown</option>
+						<option value="zoomInLeft">zoomInLeft</option>
+						<option value="zoomInRight">zoomInRight</option>
+						<option value="zoomInUp">zoomInUp</option>
+					</optgroup>
+					<optgroup label="Zoom Exits">
+						<option value="zoomOut">zoomOut</option>
+						<option value="zoomOutDown">zoomOutDown</option>
+						<option value="zoomOutLeft">zoomOutLeft</option>
+						<option value="zoomOutRight">zoomOutRight</option>
+						<option value="zoomOutUp">zoomOutUp</option>
+					</optgroup>
+					<optgroup label="Specials">
+						<option value="hinge">hinge</option>
+						<option value="jackInTheBox">jackInTheBox</option>
+						<option value="rollIn">rollIn</option>
+						<option value="rollOut">rollOut</option>
+					</optgroup>
+				</select>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Budgetting</legend>
+			<div class="card">
+				<label for="ad-budget">$</label>
+				<input type="number" name="budget" id="ad-budget" min="10" max="1000" step="5" placeholder="25" required="" />
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Payment Info</legend>
+			<div class="card">
+				<label for="ad-card-name">Name</label>
+				<input type="text" name="card[name]" id="ad-card-name" autocomplete="cc-name" placeholder="First Last" required="" />
+			</div>
+			<div class="card">
+				<label for="ad-card-num">Number</label>
+				<input type="number" name="card[number]" id="ad-card-num" autocomplete="cc-number" placeholder="#############" required="" />
+			</div>
+			<div class="card">
+				<label for="ad-card-exp-month">Expiration</label>
+				<input type="number" name="card[exp][month]" id="ad-card-exp-month" autocomplete="cc-exp-month" placeholder="06" min="1" max="12" required="" />
+				<span>/</span>
+				<input type="number" name="card[exp][year]" id="ad-card-exp-year" autocomplete="cc-exp-year" placeholder="<?=date('Y')?>" min="<?=date('Y')?>" required="" />
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Contact Info</legend>
+			<div class="card">
+				<label for="ad-name">Name</label>
+				<input type="text" name="name" id="ad-name" autocomplete="billing name" placeholder="First Last" required="" />
+			</div>
+			<div class="card">
+				<label for="ad-org">Organization</label>
+				<input type="text" name="organization" id="ad-org" autocomplete="billing organization" placeholder="Organization" />
+			</div>
+			<div class="card">
+				<label for="ad-link">URL</label>
+				<input type="url" name="link" id="ad-link" autocomplete="url" placeholder="http://example.com" required="" />
+			</div>
+			<div class="card">
+				<label for="ad-tel">Phone</label>
+				<input type="tel" name="telephone" id="ad-tel" autocomplete="billing tel" placeholder="+1-555-555-5555" />
+			</div>
+			<div class="card">
+				<label for="ad-email">Email</label>
+				<input type="email" name="email" id="ad-email" autocomplete="billing email" placeholder="user@example.com" required="" />
+			</div>
+			<div class="card">
+				<label for="ad-street-address">Address</label>
+				<br />
+				<input type="text" name="address[streetAddress]" id="ad-street-address" autocomplete="billing street-address" placeholder="123 Some St." required="" />
+				<br />
+				<input type="text" name="address[addressRegion]" list="local-cities" autocomplete="billing address-level2" placeholder="City" required="" />,
+				<input type="text" name="address[addressLocality]" autocomplete="billing address-level1" placeholder="State" maxlength="2" minlength="2" size="3" required="" />
+				<br />
+				<input type="number" name="address[postalCode]" autocomplete="billing postal-code" placeholder="#####" min="10000" max="99999" required="" />
+				<datalist id="local-cities">
+					<option value="Lake Isabella" />
+					<option value="Wofford Heights" />
+					<option value="Kernville" />
+					<option value="Mt. Mesa" />
+					<option value="South Lake" />
+					<option value="Weldon" />
+					<option value="Bodfish" />
+				</datalist>
+			</div>
+		</fieldset>
+		<br />
+		<div>
+			<button type="submit" class="btn-go">Submit</button>
+			<button type="reset" class="btn-danger" data-close="#ad-dialog">Cancel</button>
+		</div>
+		<br />
+	</form>
+</dialog>

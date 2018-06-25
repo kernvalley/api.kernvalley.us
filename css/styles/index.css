@@ -1,0 +1,74 @@
+@charset "UTF-8";
+@import url("./vars.css");
+@import url("https://shgysk8zer0.github.io/css/core-css/viewport.css");
+@import url("https://shgysk8zer0.github.io/css/core-css/rem.css");
+@import url("https://shgysk8zer0.github.io/css/core-css/element.css");
+@import url("https://shgysk8zer0.github.io/css/core-css/class-rules.css");
+@import url("https://shgysk8zer0.github.io/css/core-css/animations.css");
+@import url("https://shgysk8zer0.github.io/css/animate.css/animate.css");
+@import url("https://shgysk8zer0.github.io/css/core-css/fonts.css");
+
+dialog {
+	border: none;
+	max-height: 95vh;
+	overflow-y: auto;
+}
+
+#header {
+	color: var(--alt-color);
+	background: var(--header-bg);
+	padding: 1.3rem;
+	height: var(--header-height);
+	justify-content: space-around;
+}
+
+#footer {
+	color: var(--alt-color);
+	background: var(--footer-bg);
+	padding: 1.3rem;
+	height: var(--footer-height);
+}
+
+#ad-budget {
+	width: 7em;
+}
+
+main {
+	height: calc(100vh - var(--header-height) - var(--footer-height));
+	overflow: auto;
+	padding: 1.3rem;
+}
+
+.ad {
+	padding: 1.3rem;
+	border: var(--card-border, 1px solid #ccc);
+	border-radius: var(--card-radius, 2px);
+	float: left;
+}
+
+.nl-show {
+	white-space: pre-line;
+}
+
+.btn-danger, .btn-danger:active {
+	background: var(--button-danger-background);
+	color: var(--button-danger-color);
+}
+
+.btn-go, .btn-go:active {
+	background: var(--button-go-background);
+	color: var(--button-go-color);
+}
+
+[type="text"], [type="number"], [type="tel"], [type="email"], [type="url"], [type="password"] {
+	border: none;
+	border-bottom: 2px solid #aaa;
+}
+
+[autocomplete="cc-exp-month"] {
+	width: 3em;
+}
+
+[autocomplete="cc-exp-year"] {
+	width: 4em;
+}

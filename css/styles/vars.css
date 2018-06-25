@@ -1,0 +1,33 @@
+:root {
+	--red: #FF4C4C;
+	--green: #19C131;
+	--blue: #2281D9;
+
+	--alt-color: #fefefe;
+	--primary-color: #ececec;
+	--accent-color: var(--blue);
+
+	--main-font: Roboto;
+	--title-font: Alice;
+	--header-font: var(--title-font);
+
+	--header-bg: linear-gradient(#F89300, #AB5000);
+	--footer-bg: #434343;
+
+	--header-height: 6rem;
+	--footer-height: 3rem;
+
+	--button-padding: 0.3rem;
+	--button-background: var(--accent-color);
+	--button-color: var(--alt-color);
+	--button-border: none;
+	--button-border-radius: 0.25rem;
+	--button-danger-background: var(--red);
+	--button-danger-color: var(--button-color);
+	--button-go-background: var(--green);
+	--button-go-color: var(--button-color);
+
+	--button-active-background: var(--button-background);
+	--button-active-color: var(--button-color);
+	--button-active-border: var(--button-border);
+}

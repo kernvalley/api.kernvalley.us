@@ -1,0 +1,48 @@
+<dialog id="api-dialog" class="card animation-speed-normal animation-ease-in fadeInDown">
+	<form name="api">
+		<fieldset id="api-url">
+			<legend>Request URL</legend>
+			<div>
+				<input type="url" name="url" placeholder="http://example.com" autocomplete="off" required="" />
+			</div>
+			<div>
+				<select name="method">
+					<option value="GET">GET</option>
+					<option value="POST">POST</option>
+					<option value="HEAD">HEAD</option>
+					<option value="PUT">PUT</option>
+					<option value="DELETE">DELETE</option>
+				</select>
+			</div>
+		</fieldset>
+		<fieldset id="api-headers" autocomplete="off">
+			<legend>Request Headers</legend>
+			<div id="headers-list"></div>
+			<button type="button" data-add="header" id="add-header" class="btn-go">&nbsp;+&nbsp;</button>
+			<datalist id="common-headers">
+				<option value="Accept" />
+			</datalist>
+		</fieldset>
+		<fieldset id="api-params">
+			<legend>Request Params</legend>
+			<div id="params-list"></div>
+			<button type="button" data-add="param" id="add-param" class="btn-go">&nbsp;+&nbsp;</button>
+		</fieldset>
+		<button type="submit" class="btn-go">Submit</button>
+		<button type="reset" class="btn-danger" data-close="#api-dialog">Cancel</button>
+		<template id="api-param-template">
+			<div class="api-param">
+				<input type="text" class="param-key" name="param-key[]" placeholder="key" autocomplete="off" required="" />
+				<input type="text" class="param-value" name="param-value[]" placeholder="value" autocomplete="off" />
+				<button type="button" class="remove-input btn-danger" data-remove="param">&nbsp;-&nbsp;</button>
+			</div>
+		</template>
+		<template id="api-header-template">
+			<div class="api-header">
+				<input type="text" class="header-key" name="header-key[]" list="common-headers" placeholder="key" autocomplete="off" required="" />
+				<input type="text" class="header-value" name="header-value[]" placeholder="value" autocomplete="off" />
+				<button type="button" class="remove-header btn-danger" data-remove="header">&nbsp;-&nbsp;</button>
+			</div>
+		</template>
+	</form>
+</dialog>

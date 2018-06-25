@@ -1,0 +1,28 @@
+{
+  "name": "api.kernvalley.us",
+  "version": "1.0.0",
+  "description": "API for *.kernvalley.us",
+  "keywords": ["kernvalley", "api"],
+  "private": true,
+  "author": {
+    "name": "Chris Zuber",
+    "email": "chris@chriszuber.com",
+    "url": "https://chriszuber.com"
+  },
+  "contributors": [],
+  "homepage": "",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kernvalley/api.kernvalley.us.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kernvalley/api.kernvalley.us/issues"
+  },
+  "engines": {
+    "npm": ">=3.5"
+  },
+  "scripts": {
+    "start": "php -S localhost:8000"
+  }
+}

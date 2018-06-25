@@ -1,0 +1,23 @@
+<template id="ad-template">
+	<div class="ad center font-main background-cover inline-block animation-speed-normal animation-ease-in slideInUp">
+		<a href="" target="_blank" rel="external noopener" class="block clearfix" data-field="link">
+			<img data-field="logo" alt="" class="float-left animation-speed-normal animation-ease-in" width="64" height="64"/>
+			<h3 class="font-title center" data-field="title"></h3>
+		</a>
+		<p data-field="content" class="nl-show"></p>
+		<div>
+			<a href="" data-field="telephone-link">
+				<svg class="current-color icon">
+					<use xlink:href="/img/icons.svg#call-start" />
+				</svg>
+				<span data-field="telephone"></span>
+			</a>
+			<a href="" data-field="email-link">
+				<svg class="current-color icon">
+					<use xlink:href="/img/icons.svg#mail-unread" />
+				</svg>
+				<span data-field="email"></span>
+			</a>
+		</div>
+	</div>
+</template>
