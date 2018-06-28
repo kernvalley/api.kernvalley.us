@@ -165,6 +165,31 @@
 				<label for="ad-budget">$</label>
 				<input type="number" name="budget" id="ad-budget" min="10" max="1000" step="5" placeholder="25" required="" />
 			</div>
+			<div class="card">
+				<lable for="ad-start-date">Start</label>
+				<input type="date" name="start-date" id="ad-start-date" min="<?=date('Y-m-d')?>" value="<?=date('Y-m-d')?>" required="" />
+			</div>
+			<div class="card">
+				<label for="ad-end-date">End</label>
+				<input type="date" name="end-date" id="ad-end-date" min="<?=date('Y-m-d')?>" />
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Layout</legend>
+			<div class="card">
+				<b class="block">Padding</b>
+				<label for="ad-padding-left">Left</label>
+				<input type="number" name="padding-left" id="ad-padding-left" min="0" max="30" value="0" />
+				<hr />
+				<label for="ad-padding-left">Top</label>
+				<input type="number" name="padding-top" id="ad-padding-top" min="0" max="30" value="0" />
+				<hr />
+				<label for="ad-padding-left">Right</label>
+				<input type="number" name="padding-right" id="ad-padding-right" min="0" max="30" value="0" />
+				<hr />
+				<label for="ad-padding-left">Bottom</label>
+				<input type="number" name="padding-bottom" id="ad-padding-bottom" min="0" max="30" value="0" />
+			</div>
 		</fieldset>
 		<fieldset>
 			<legend>Payment Info</legend>

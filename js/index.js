@@ -35,6 +35,22 @@ ready().then(() => {
 		});
 	}, {passive: true});
 
+	$('[name="padding-left"]').input(event => {
+		$('#preview .ad').css({'padding-left': `${event.target.value}px`});
+	}, {passive: true});
+
+	$('[name="padding-top"]').input(event => {
+		$('#preview .ad').css({'padding-top': `${event.target.value}px`});
+	}, {passive: true});
+
+	$('[name="padding-right"]').input(event => {
+		$('#preview .ad').css({'padding-right': `${event.target.value}px`});
+	}, {passive: true});
+
+	$('[name="padding-bottom"]').input(event => {
+		$('#preview .ad').css({'padding-bottom': `${event.target.value}px`});
+	}, {passive: true});
+
 	$('[name="title"]').input(event => {
 		$('#preview [data-field="title"]').text(event.target.value);
 	}, {passive: true});

@@ -2,11 +2,12 @@
 
 namespace ad;
 
-require __DIR__ . DIRECTORY_SEPARATOR . 'functions.php';
+require __DIR__ . DIRECTORY_SEPARATOR . 'autoloader.php';
 
+use \Header;
 use function Functions\{save_upload_image};
 
-header('Content-Type: application/json');
+Header::set('Content-Type', 'application/json');
 
 if (array_key_exists('logo', $_FILES)) {
 	$ad = new \StdClass();
@@ -29,5 +30,5 @@ if (array_key_exists('logo', $_FILES)) {
 
 	echo json_encode($ad);
 } else {
-	http_response_code(400);
+	Header::status(400);
 }

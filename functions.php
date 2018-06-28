@@ -1,7 +1,9 @@
 <?php
 namespace Functions;
 
-use const \Consts\{COMPONENTS_DIR};
+use \Header;
+
+use const \Consts\{COMPONENTS_DIR, COMPONENT_EXT};
 
 function load(String ...$components): Void
 {
@@ -10,7 +12,11 @@ function load(String ...$components): Void
 	}
 }
 
-function load_component(String $component, $dir = COMPONENTS_DIR, $ext = 'phtml'): Void
+function load_component(
+	String $component,
+	String $dir = COMPONENTS_DIR,
+	String $ext = COMPONENT_EXT
+): Void
 {
 	require "{$dir}{$component}.{$ext}";
 }
@@ -108,8 +114,8 @@ function csp(Array $srcs): Void
 		array_values($srcs)
 	));
 
-	header(sprintf(
-		'Content-Security-Policy: %s',
+	Header::set(
+		'Content-Security-Policy',
 		str_replace(
 			[
 				'%STYLE_NONCE%',
@@ -120,5 +126,5 @@ function csp(Array $srcs): Void
 			],
 			$csp
 		)
-	));
+	);
 }

@@ -2,9 +2,10 @@
 
 namespace Register;
 
-require __DIR__ . DIRECTORY_SEPARATOR . 'functions.php';
+require __DIR__ . DIRECTORY_SEPARATOR . 'autoloader.php';
 
-use function Functions\array_keys_exist;
+use \Header;
+use function Functions\{array_keys_exist};
 
 function validate(Array $data): Bool
 {
@@ -15,7 +16,7 @@ function validate(Array $data): Bool
 	}
 }
 
-header('Content-Type: application/json');
+Header::set('Content-Type', 'application/json');
 
 if (array_key_exists('Person', $_POST) and is_array($_POST['Person']) and validate($_POST['Person'])) {
 	$person = $_POST['Person'];
@@ -25,6 +26,6 @@ if (array_key_exists('Person', $_POST) and is_array($_POST['Person']) and valida
 	$person['gravatar'] = 'https://secure.gravatar.com/avatar/' . md5($person['email']);
 	echo json_encode(['Person' => $person]);
 } else {
-	http_response_code(400);
+	Header::status(400);
 	echo json_encode(['error' => 'Missing or invalid input']);
 }

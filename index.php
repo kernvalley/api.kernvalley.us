@@ -1,9 +1,9 @@
 <?php
 namespace Index;
 
-require __DIR__ . DIRECTORY_SEPARATOR . 'functions.php';
-require __DIR__ . DIRECTORY_SEPARATOR . 'consts.php';
+require __DIR__ . DIRECTORY_SEPARATOR . 'autoloader.php';
 
+use \Header;
 use function Functions\{csp, load};
 use const Consts\{CSP};
 

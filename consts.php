@@ -3,6 +3,8 @@ namespace Consts;
 
 const BASE = __DIR__ . DIRECTORY_SEPARATOR;
 const COMPONENTS_DIR = BASE . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR;
+const CLASS_EXT = 'php';
+const COMPONENT_EXT = 'phtml';
 
 const CSP = [
 	'default-src' => [
